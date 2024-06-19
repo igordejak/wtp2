@@ -1,11 +1,12 @@
+import Link from './Link';
 
 const Header = () => {
   return (
     <header>
       <div className="logo">
-        <a href="/">
+        <Link href="/">
           <img src="./img/outtrack.svg" alt="Logo" />
-        </a>
+        </Link>
       </div>
       <nav>
         <ul>
