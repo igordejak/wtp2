@@ -1,10 +1,29 @@
+$base-blue: #003285;
+$light-blue: #2A629A;
+$theme-yellow: #FFDA78;
+$theme-orange: #FF7F3E;
+
 #root {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.header {
-  color: red;
+.header-wrapper {
+  width: 100%;
+  background-color: $light-blue;
+  padding: 10px;
+
+  .logo-nav {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      margin: 0;
+      display: flex;
+    }
+  }
+
+  .logo img {
+    height: 40px;
+  }
 }
