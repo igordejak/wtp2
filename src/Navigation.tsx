@@ -1,7 +1,9 @@
 import Link from "./Link";
 
 const Navigation = () => (
-  <nav className="sdfdsf">
+  <nav className="menu-wrapper">
+    <button id="menu-icon">
+    </button>
     <ul className="ul">
       <li className="li">
         <Link href="/">Home</Link>
