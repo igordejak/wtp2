@@ -2,12 +2,12 @@ import { ReactNode } from "react";
 
 interface IProps {
   icon: string;
-  children: ReactNode;
+  title: ReactNode;
 }
 
-const Maintitle = ({ icon, children }: IProps) => (
+const Maintitle = ({ icon, title }: IProps) => (
   <div className="type-title">
-      <img src={icon}></img>{children}
+      <img src={icon}></img>{title}
     </div>
 );
 

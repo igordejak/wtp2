@@ -8,11 +8,11 @@ function App() {
       <Header />
       <div className="base-wrapper">
         <div className="type-block">
-          <Maintitle icon="./img/money-icon.svg" children="Money" />
+          <Maintitle icon="./img/money-icon.svg" title="Money" />
           /* place for table */
         </div>
         <div className="type-block">
-          <Maintitle icon="./img/stuff-icon.svg" children="Stuff" />
+          <Maintitle icon="./img/stuff-icon.svg" title="Stuff" />
           /* place for table */
         </div>
       </div>
