@@ -25,17 +25,43 @@ $theme-orange: #FF7F3E;
 }
 
 .menu-wrapper {
-  .ul {
-    display: none;
-  }
-  #menu-icon {
+  position: relative;
+
+  .menu-icon {
     display: inline-block;
     height: 21px;
     width: 28px;
     background: url(./img/menu.svg) no-repeat center;
+  }
+
+  .menu-icon-close {
+    display: inline-block;
+    height: 21px;
+    width: 28px;
+    background: url(./img/close.svg) no-repeat center;
+
     :hover {
       border: 0;
       outline: 0;
     }
   }
+
+  .menu-icon-hidden {
+    display: none;
+  }
+  .menu-icon-close-hidden {
+    display: none;
+  }
+  .menu-block-hidden {
+    display: none;
+  }
+  .menu-block {
+    position: absolute;
+    top: 15px;
+    padding: 20px;
+    background: #ccc;
+    width: 200px;
+    right: 0;
+  }
 }
+
