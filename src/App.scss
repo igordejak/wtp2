@@ -6,12 +6,43 @@ $theme-orange: #FF7F3E;
 #root {
   max-width: 1200px;
   margin: 0 auto;
+  background: #262626;
+}
+.base-wrapper {
+  padding: 19px 9px;
+  display: flex;
+  gap: 12px;
+}
+.type-block {
+  padding: 8px;
+  background: #302F2F;
+  width: 100%;
+  .type-title {
+    border-bottom: 1px solid #2A629A;
+    padding: 12px;
+    margin-bottom: 14px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-size: 22px;
+    color: $theme-yellow;
+  }
+}
+
+button {
+  border: none;
+  &:hover {
+    border: none;
+  }
+  &:focus {
+    border: none;
+    outline: none;
+  }
 }
 
 .header-wrapper {
-  width: 100%;
   background-color: $light-blue;
-  padding: 10px;
+  padding: 5px 10px;
 
   .logo-nav {
     display: flex;
@@ -32,6 +63,7 @@ $theme-orange: #FF7F3E;
     height: 21px;
     width: 28px;
     background: url(./img/menu.svg) no-repeat center;
+    cursor: pointer;
   }
 
   .menu-icon-close {
@@ -39,29 +71,50 @@ $theme-orange: #FF7F3E;
     height: 21px;
     width: 28px;
     background: url(./img/close.svg) no-repeat center;
-
-    :hover {
-      border: 0;
-      outline: 0;
-    }
+    cursor: pointer;
   }
 
   .menu-icon-hidden {
     display: none;
   }
+
   .menu-icon-close-hidden {
     display: none;
   }
+
   .menu-block-hidden {
     display: none;
   }
+
   .menu-block {
     position: absolute;
     top: 15px;
     padding: 20px;
-    background: #ccc;
+    background: #302F2F;
     width: 200px;
     right: 0;
+    list-style: none;
+    padding: 8px;
+    li {
+      padding: 6px;
+      &:hover {
+        background-color: #6F6F6F;
+        a {
+          color: #fff;
+        }
+      }
+      a {
+        color: $theme-yellow;
+        text-decoration: none;
+    }
   }
 }
-
+@media screen and (max-width: 786px) {
+  .base-wrapper {
+    flex-direction: column;
+  }
+  .type-title {
+    font-size: 18px;
+  }
+}
+}
