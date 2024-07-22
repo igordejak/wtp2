@@ -1,6 +1,7 @@
 import "./App.scss";
 import Header from "./Header";
 import Maintitle from "./Maintitle";
+import MoneyOut from "./MoneyOut";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <div className="base-wrapper">
         <div className="type-block">
           <Maintitle icon="./img/money-icon.svg" title="Money" />
-          /* place for table */
+          <MoneyOut />
         </div>
         <div className="type-block">
           <Maintitle icon="./img/stuff-icon.svg" title="Stuff" />
