@@ -1,33 +1,38 @@
-import { useState, useEffect } from "react";
 
-const MoneyOut = () => {
-    const [data, setData] = useState([]);
 
-    const fetchData = () => {
-         fetch("http://localhost:5173/money-out.json")        
-          .then((response) => response.json())      
-          .then((actualData) => {
-            setData(actualData);
-          })
-          .catch((err) => {
-            console.log(err.message);
-          });
-      };
-      useEffect(() => {
-        fetchData();
-      }, []);
-    return (
-      <div className="show-table">
+import Fetch from "../helpers/Fetch";
+
+interface IProps {
+    url: string;
+  }
+
+const MoneyOut = ({ url }: IProps) => {
+  return (
+    <Fetch url={url}>
         
-        {data.map((row) => (
-            
-          <div className="row-wrapper" key={row.id}>
-            <div className="cell">{row.actiondate}</div>
-            <div className="cell">{row.title}</div>
-            <div className="cell">{row.summ}</div>
-          </div>
+        {({ data, error, isLoading }) => {
+            console.log(data)
+        if (error) {
+          return <div>Error fetching data: {error.message}</div>;
+        }
+
+        if (isLoading) {
+          return <div>Loading...</div>;
+        }
+        return (
+          <div className="show-table">
+           {data.map((item) => (
+              <div className="row-wrapper" key={item.id} >
+                <div className="cell">{item.actiondate}</div>
+                <div className="cell">{item.title}</div>
+                <div className="cell">$ {item.summ}</div>
+              </div>
         ))}
-      </div>
-    );
-  };
-  export default MoneyOut;
+          </div>
+        );
+      }}
+    </Fetch>
+  );
+};
+
+export default MoneyOut;
