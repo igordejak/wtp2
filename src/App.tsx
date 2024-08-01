@@ -10,7 +10,7 @@ function App() {
       <div className="base-wrapper">
         <div className="type-block">
           <Maintitle icon="./img/money-icon.svg" title="Money" />
-          <MoneyOut />
+          <MoneyOut url="http://localhost:5173/money-out.json" />
         </div>
         <div className="type-block">
           <Maintitle icon="./img/stuff-icon.svg" title="Stuff" />
